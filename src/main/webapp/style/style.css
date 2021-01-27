@@ -58,3 +58,18 @@ body {
     font-size: 20px;
     width: 600px;
 }
+
+.form-visible {
+    display: block;
+}
+
+.form-invisible {
+    display: none;
+}
+
+.info-for-client {
+    font-size: 25px;
+    color: pink;
+    font-family: 'Alfa Slab One', cursive;
+    text-align: center;
+}
