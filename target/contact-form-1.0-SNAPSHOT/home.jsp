@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <title>Contact form</title>
     <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-    <link rel="stylesheet" href="style/style.css"/>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <link rel="stylesheet" href="style/style.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="visible" name="block-with-form">
+<div id="div-form-and-logo" class="visible">
 <div class="naglowek">
     <p class="naglowek-text">Skontaktuj się z nami</p>
     <p class="naglowek-text-2">Odpowiemy najszybciej jak będzie to możliwe</p>
@@ -40,14 +40,14 @@
         </p>
 
         <p>
-            <input type="submit" value="Wyślij" class="form-submit-button">
+            <input type="submit" value="Wyślij" class="form-submit-button" id="submit-button-form">
         </p>
 
     </form>
 </div>
 </div>
 
-<p class="info-for-client" class="visible">
+<p id="p-information-after-form" class="info-for-client" class="invisible">
     <c:out value="${returnInformation}"/>
 </p>
 
