@@ -13,24 +13,29 @@
 
 <div id="div-form-and-logo" class="visible">
 <div class="naglowek">
-    <p class="naglowek-text">Skontaktuj się z nami</p>
-    <p class="naglowek-text-2">Odpowiemy najszybciej jak będzie to możliwe</p>
+    <p class="naglowek-text">Złóż reklamacje</p>
+    <p class="naglowek-text-2">Rozpatrzymy ją najszybciej jak będzie to możliwe</p>
 </div>
 
 <div class="contact-form">
     <form method="post" action="/Contact_form/formServlet">
         <p>
-            <label class="form-labels">Tytuł wiadomości</label><BR>
-            <input type="text" class="form-inputs" name="topic">
+            <label class="form-labels">Numer faktury</label><BR>
+            <input type="text" class="form-inputs" name="voice-number">
         </p>
 
         <p>
-            <label class="form-labels">Treść wiadomości</label><BR>
+            <label class="form-labels">Symbol produktu</label><BR>
+            <input type="text" class="form-inputs" name="product-symbol">
+        </p>
+
+        <p>
+            <label class="form-labels">Dodatkowe informacje</label><BR>
             <textarea class="form-textarea" name="content"></textarea>
         </p>
 
         <p>
-            <label class="form-labels">Adres e-mial do kontaktu</label><BR>
+            <label class="form-labels">Adres e-mial do odpowiedzi</label><BR>
             <input type="email" class="form-inputs" name="email">
         </p>
 

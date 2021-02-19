@@ -11,54 +11,17 @@ import java.io.IOException;
 @WebServlet("/formServlet")
 public class FormServlet extends HttpServlet {
 
-    private String topic;
-    private String content;
-    private String email;
-    private String telephone;
+    protected void doPost(HttpServletResponse res, HttpServletRequest req) throws IOException, ServletException {
+        Form createForm = new Form();
+        createForm.setVoiceNumber(req.getParameter("voice-number"));
+        createForm.setProductSymbol(req.getParameter("product-symbol"));
+        createForm.setContent(req.getParameter("content"));
+        createForm.setEmail(req.getParameter("email"));
+        createForm.setTelephone(req.getParameter("telepphone"));
 
-
-    public String getTopic() {
-        return topic;
-    }
-
-    public void setTopic(String topic) {
-        this.topic = topic;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getTelephone() {
-        return telephone;
-    }
-
-    public void setTelephone(String telephone) {
-        this.telephone = telephone;
-    }
-
-    protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        setTopic(req.getParameter("topic"));
-        setContent(req.getParameter("content"));
-        setEmail(req.getParameter("email"));
-        setTelephone(req.getParameter("telephone"));
-
-        String returnInformation = "Dziękujemy za wypełnienie formularza";
-
+        String returnInformation = "Dziękujemy za wypełnienie formularza. Twoja faktura nr " + createForm.getVoiceNumber() + " została przesłana do reklamacji.";
         req.setAttribute("returnInformation", returnInformation);
-        req.getServletContext().getRequestDispatcher("/home.jsp").forward(req, res);
-    }
+        getServletContext().getRequestDispatcher("/home.jsp").forward(req, res);
 
+    }
 }

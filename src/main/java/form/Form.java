@@ -2,13 +2,15 @@ package form;
 
 public class Form {
 
-    protected String topic;
-    protected String content;
-    protected String email;
-    protected String telephone;
+    public String voiceNumber;
+    public String productSymbol;
+    public String content;
+    public String email;
+    public String telephone;
 
-    public Form (String topic, String content, String email, String telephone) {
-        this.topic = topic;
+    public Form (String voiceNumber, String productSymbol, String content, String email, String telephone) {
+        this.voiceNumber = voiceNumber;
+        this.productSymbol = productSymbol;
         this.content = content;
         this.email = email;
         this.telephone = telephone;
@@ -18,13 +20,20 @@ public class Form {
 
     }
 
-
-    public String getTopic() {
-        return topic;
+    public String getVoiceNumber() {
+        return voiceNumber;
     }
 
-    public void setTopic(String topic) {
-        this.topic = topic;
+    public void setVoiceNumber(String voiceNumber) {
+        this.voiceNumber = voiceNumber;
+    }
+
+    public String getProductSymbol() {
+        return productSymbol;
+    }
+
+    public void setProductSymbol(String productSymbol) {
+        this.productSymbol = productSymbol;
     }
 
     public String getContent() {
